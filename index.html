@@ -6,10 +6,12 @@
     <title>rendex</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <header class="header">
       <nav class="navbar">
         <a href="#inicio" class="logo">rende<span>x</span></a>
+
         <div class="nav-links">
           <a href="#inicio" class="active">Início</a>
           <a href="#dashboard">Dashboard</a>
@@ -27,12 +29,14 @@
         <div class="hero">
           <div class="hero-content">
             <h1>rende<span>x</span></h1>
+
             <p class="hero-description">
               Pra quem tá endividado, pra quem tá começando agora e pra quem só
               quer entender melhor a grana. Aprenda a investir do zero, descubra
               pra onde vai seu dinheiro e saia das dívidas, com números de
               verdade e sem enrolação de banco.
             </p>
+
             <div class="hero-buttons">
               <a href="#dashboard" class="btn green">Minha situação →</a>
               <a href="#dividas" class="btn orange">Tô no vermelho</a>
@@ -42,12 +46,14 @@
           <div class="featured-card">
             <span class="featured-label">DESTAQUE RENDEX</span>
             <h3>Saúde Financeira da GenZ</h3>
+
             <p>
               Segundo dados recentes da Serasa e Banco Central, mais de 80
               milhões de brasileiros enfrentam restrições de crédito. O Rendex
               traz métricas limpas pra você zerar pendências e multiplicar
               patrimônio.
             </p>
+
             <div class="featured-footer">
               <span>Copom &amp; IBGE Atualizados</span>
               <strong>100% Gratuito</strong>
@@ -164,6 +170,7 @@
 
               <div class="finance-actions">
                 <button class="btn green" type="button">Minha Situação</button>
+
                 <button class="btn green-outline" type="button">
                   Baixar planilha (.xlsx)
                 </button>
@@ -172,6 +179,7 @@
 
             <div class="ai-card">
               <h3>Pergunte à IA</h3>
+
               <p>
                 Oi! Pergunta o que quiser sobre suas finanças ou dúvidas sobre o
                 mundo financeiro.
@@ -183,6 +191,7 @@
                   aria-label="Sua pergunta para a IA"
                   placeholder="Ex: Com meu salário qual seria o melhor investimento?"
                 />
+
                 <button class="btn green" type="button">Enviar</button>
               </div>
 
@@ -199,6 +208,7 @@
       <section class="extra-section" id="trilha">
         <div class="section-heading">
           <h2>Trilha de <span>aprendizagem</span></h2>
+
           <p>
             Siga uma jornada prática e direta, estruturada com seis módulos na
             ordem correta. Vá marcando o que já viu para acompanhar sua
@@ -212,15 +222,19 @@
               src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
               alt="Finanças básicas"
             />
+
             <div class="learning-content">
               <span class="module-icon">▣</span>
+
               <div>
                 <h3>Quiz Finanças Básicas</h3>
                 <small>Módulo 1</small>
+
                 <p>
                   Organize suas finanças, entenda seus gastos, receitas e
                   orçamento.
                 </p>
+
                 <a href="#" class="btn green">Iniciar módulo →</a>
               </div>
             </div>
@@ -231,12 +245,16 @@
               src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=800&q=80"
               alt="Investimentos"
             />
+
             <div class="learning-content">
               <span class="module-icon">▥</span>
+
               <div>
                 <h3>Quiz Investimentos</h3>
                 <small>Módulo 2</small>
+
                 <p>Conheça os primeiros passos para investir.</p>
+
                 <a href="#" class="btn green">Iniciar módulo →</a>
               </div>
             </div>
@@ -293,43 +311,15 @@
       <section class="extra-section" id="noticias">
         <div class="section-heading">
           <h2>Radar Rendex de Notícias</h2>
+
           <p>
             O que tá rolando no mercado financeiro e na economia real. Clique
             pra ler a matéria original.
           </p>
         </div>
 
-        <div class="news-grid">
-          <article class="news-card">
-            <span class="news-tag">Juros</span>
-            <h3>Copom reduz a Taxa Selic para 13,75% ao ano</h3>
-            <p>
-              Decisão do Comitê de Política Monetária reduz juros básicos em
-              0,25 ponto percentual.
-            </p>
-            <a href="#">Ler no portal original ↗</a>
-          </article>
-
-          <article class="news-card">
-            <span class="news-tag">Inflação</span>
-            <h3>
-              IPCA de setembro registra alta de 0,82% e atinge 4,58% em 12 meses
-            </h3>
-            <p>Índice de inflação oficial acelera em relação a agosto.</p>
-            <a href="#">Ler no portal original ↗</a>
-          </article>
-
-          <article class="news-card">
-            <span class="news-tag">Juros</span>
-            <h3>
-              Análise de mercado: Bradesco prevê ciclo contínuo de cortes da
-              Selic
-            </h3>
-            <p>
-              Relatório projeta trajetória decrescente da taxa básica de juros.
-            </p>
-            <a href="#">Ler no portal original ↗</a>
-          </article>
+        <div class="news-grid" id="newsGrid" aria-live="polite">
+          <p class="news-loading">Carregando as últimas notícias...</p>
         </div>
 
         <div class="center-button">
@@ -341,6 +331,7 @@
       <section class="extra-section debts-section" id="dividas">
         <div class="section-heading">
           <h2>Estratégias para Eliminar Dívidas</h2>
+
           <p>
             Você não está sozinho: segundo a Serasa, são 82,8 milhões de
             brasileiros inadimplentes. É totalmente possível sair desse ciclo
@@ -403,10 +394,12 @@
         <div class="debt-info-grid">
           <article class="debt-info-card">
             <h3>Dois métodos reconhecidos</h3>
+
             <p>
               <strong>Método Avalanche:</strong> prioriza a dívida de juros mais
               alto. Economiza mais dinheiro no final.
             </p>
+
             <p>
               <strong>Método Bola de Neve:</strong> prioriza a menor dívida. As
               vitórias rápidas ajudam a manter o plano.
@@ -415,14 +408,17 @@
 
           <article class="debt-info-card">
             <h3>Seus direitos garantidos por lei</h3>
+
             <p>
               <strong>Teto do rotativo:</strong> juros do cartão não podem
               passar de 100% da dívida original (Lei 14.690/2023).
             </p>
+
             <p>
               <strong>Prescrição de cadastro:</strong> o nome sai dos cadastros
               após 5 anos (Súmula 323 do STJ).
             </p>
+
             <p>
               <strong>Canais oficiais:</strong> Serasa Limpa Nome, Desenrola
               Brasil ou app do seu banco. Cuidado com fraudes.
@@ -449,5 +445,154 @@
         <p>© 2026 Todos os direitos reservados.</p>
       </div>
     </footer>
+
+    <!-- INTEGRAÇÃO DO RADAR DE NOTÍCIAS -->
+    <script>
+      const NEWS_API_URL = "https://rendex-news-api.kauadecaires.workers.dev/";
+
+      async function carregarNoticias() {
+        const newsGrid = document.getElementById("newsGrid");
+
+        if (!newsGrid) return;
+
+        newsGrid.innerHTML =
+          '<p class="news-loading">Carregando as últimas notícias...</p>';
+
+        try {
+          const response = await fetch(NEWS_API_URL, {
+            method: "GET",
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          if (!response.ok) {
+            throw new Error("A API respondeu com erro " + response.status);
+          }
+
+          const data = await response.json();
+
+          if (
+            data.status !== "success" ||
+            !Array.isArray(data.results) ||
+            data.results.length === 0
+          ) {
+            throw new Error("A API não retornou notícias.");
+          }
+
+          newsGrid.replaceChildren();
+
+          data.results.slice(0, 3).forEach((noticia) => {
+            const card = document.createElement("article");
+            card.className = "news-card";
+
+            const tag = document.createElement("span");
+            tag.className = "news-tag";
+            tag.textContent = classificarNoticia(noticia.title || "");
+
+            if (noticia.image_url && /^https?:\/\//i.test(noticia.image_url)) {
+              const imagem = document.createElement("img");
+
+              imagem.className = "news-image";
+              imagem.src = noticia.image_url;
+              imagem.alt = noticia.title
+                ? "Imagem: " + noticia.title
+                : "Imagem da notícia";
+
+              imagem.loading = "lazy";
+
+              imagem.style.width = "100%";
+              imagem.style.height = "160px";
+              imagem.style.objectFit = "cover";
+              imagem.style.borderRadius = "10px";
+              imagem.style.marginBottom = "12px";
+
+              imagem.onerror = () => imagem.remove();
+
+              card.appendChild(imagem);
+            }
+
+            const titulo = document.createElement("h3");
+            titulo.textContent = noticia.title || "Notícia sem título";
+
+            const descricao = document.createElement("p");
+            descricao.textContent =
+              noticia.description ||
+              "Acesse a matéria para conferir os detalhes.";
+
+            const fonte = document.createElement("small");
+            fonte.className = "news-source";
+            fonte.textContent = noticia.source
+              ? "Fonte: " + noticia.source
+              : "";
+
+            const link = document.createElement("a");
+            link.textContent = "Ler no portal original ↗";
+            link.href = noticia.link || "#";
+
+            if (noticia.link && /^https?:\/\//i.test(noticia.link)) {
+              link.target = "_blank";
+              link.rel = "noopener noreferrer";
+            } else {
+              link.removeAttribute("href");
+            }
+
+            card.append(tag, titulo, descricao);
+
+            if (fonte.textContent) {
+              card.appendChild(fonte);
+            }
+
+            card.appendChild(link);
+            newsGrid.appendChild(card);
+          });
+        } catch (error) {
+          console.error("Erro ao carregar notícias:", error);
+
+          newsGrid.innerHTML =
+            '<p class="news-error">Não foi possível carregar as notícias agora. Tente atualizar a página em alguns instantes.</p>';
+        }
+      }
+
+      function classificarNoticia(titulo) {
+        const texto = titulo.toLowerCase();
+
+        if (
+          texto.includes("selic") ||
+          texto.includes("juros") ||
+          texto.includes("copom")
+        ) {
+          return "Juros";
+        }
+
+        if (
+          texto.includes("ipca") ||
+          texto.includes("inflação") ||
+          texto.includes("preços")
+        ) {
+          return "Inflação";
+        }
+
+        if (
+          texto.includes("dólar") ||
+          texto.includes("câmbio") ||
+          texto.includes("bolsa")
+        ) {
+          return "Mercado";
+        }
+
+        if (
+          texto.includes("trabalho") ||
+          texto.includes("emprego") ||
+          texto.includes("renda")
+        ) {
+          return "Economia";
+        }
+
+        return "Economia";
+      }
+
+      document.addEventListener("DOMContentLoaded", carregarNoticias);
+    </script>
   </body>
 </html>
