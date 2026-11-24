@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rendex</title>
+    <meta name="theme-color" content="#0c1426" />
+    <title>Rendex</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <header class="header">
       <nav class="navbar">
-        <a href="#inicio" class="logo">rende<span>x</span></a>
+        <a href="#inicio" class="logo" aria-label="Rendex - Início">
+          rende<span>x</span>
+        </a>
 
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
           <a href="#inicio" class="active">Início</a>
           <a href="#dashboard">Dashboard</a>
           <a href="#trilha">Trilha de Aprendizagem</a>
@@ -170,7 +173,6 @@
 
               <div class="finance-actions">
                 <button class="btn green" type="button">Minha Situação</button>
-
                 <button class="btn green-outline" type="button">
                   Baixar planilha (.xlsx)
                 </button>
@@ -191,7 +193,6 @@
                   aria-label="Sua pergunta para a IA"
                   placeholder="Ex: Com meu salário qual seria o melhor investimento?"
                 />
-
                 <button class="btn green" type="button">Enviar</button>
               </div>
 
@@ -225,17 +226,14 @@
 
             <div class="learning-content">
               <span class="module-icon">▣</span>
-
               <div>
                 <h3>Quiz Finanças Básicas</h3>
                 <small>Módulo 1</small>
-
                 <p>
                   Organize suas finanças, entenda seus gastos, receitas e
                   orçamento.
                 </p>
-
-                <a href="#" class="btn green">Iniciar módulo →</a>
+                <a href="#dashboard" class="btn green">Ir para o Dashboard →</a>
               </div>
             </div>
           </article>
@@ -248,14 +246,13 @@
 
             <div class="learning-content">
               <span class="module-icon">▥</span>
-
               <div>
                 <h3>Quiz Investimentos</h3>
                 <small>Módulo 2</small>
-
                 <p>Conheça os primeiros passos para investir.</p>
-
-                <a href="#" class="btn green">Iniciar módulo →</a>
+                <a href="#calculadora" class="btn green">
+                  Ir para a Calculadora →
+                </a>
               </div>
             </div>
           </article>
@@ -273,19 +270,19 @@
           <div class="calculator-form">
             <h3>Parâmetros da simulação</h3>
 
-            <label>Quanto você tem pra começar (R$)</label>
-            <input type="number" value="1000" />
+            <label for="valorInicial">Quanto você tem pra começar (R$)</label>
+            <input id="valorInicial" type="number" value="1000" />
 
-            <label>Quanto vai guardar por mês (R$)</label>
-            <input type="number" value="300" />
+            <label for="aporteMensal">Quanto vai guardar por mês (R$)</label>
+            <input id="aporteMensal" type="number" value="300" />
 
-            <label>Por quantos meses</label>
-            <input type="number" value="24" />
+            <label for="periodo">Por quantos meses</label>
+            <input id="periodo" type="number" value="24" />
 
-            <label>Quanto vai adicionar por mês</label>
-            <input type="number" value="150" />
+            <label for="aporteExtra">Quanto vai adicionar por mês</label>
+            <input id="aporteExtra" type="number" value="150" />
 
-            <button class="btn green">Calcular</button>
+            <button class="btn green" type="button">Calcular</button>
           </div>
 
           <div class="calculator-result">
@@ -311,7 +308,6 @@
       <section class="extra-section" id="noticias">
         <div class="section-heading">
           <h2>Radar Rendex de Notícias</h2>
-
           <p>
             O que tá rolando no mercado financeiro e na economia real. Clique
             pra ler a matéria original.
@@ -323,7 +319,7 @@
         </div>
 
         <div class="center-button">
-          <a href="#" class="btn green">Veja mais notícias</a>
+          <a href="#newsGrid" class="btn green">Veja mais notícias ↓</a>
         </div>
       </section>
 
@@ -339,7 +335,9 @@
           </p>
         </div>
 
-        <h3 class="steps-title">Plano de Ataque em 6 Passos</h3>
+        <h3 class="steps-title" id="passos-dividas">
+          Plano de Ataque em 6 Passos
+        </h3>
 
         <div class="steps-grid">
           <article class="step-card">
@@ -394,12 +392,10 @@
         <div class="debt-info-grid">
           <article class="debt-info-card">
             <h3>Dois métodos reconhecidos</h3>
-
             <p>
               <strong>Método Avalanche:</strong> prioriza a dívida de juros mais
               alto. Economiza mais dinheiro no final.
             </p>
-
             <p>
               <strong>Método Bola de Neve:</strong> prioriza a menor dívida. As
               vitórias rápidas ajudam a manter o plano.
@@ -408,43 +404,76 @@
 
           <article class="debt-info-card">
             <h3>Seus direitos garantidos por lei</h3>
-
             <p>
               <strong>Teto do rotativo:</strong> juros do cartão não podem
               passar de 100% da dívida original (Lei 14.690/2023).
             </p>
-
             <p>
               <strong>Prescrição de cadastro:</strong> o nome sai dos cadastros
               após 5 anos (Súmula 323 do STJ).
             </p>
-
             <p>
               <strong>Canais oficiais:</strong> Serasa Limpa Nome, Desenrola
               Brasil ou app do seu banco. Cuidado com fraudes.
             </p>
           </article>
         </div>
-
-        <div class="center-button">
-          <a href="#" class="btn green">
-            Veja mais sobre como sair das dívidas
-          </a>
-        </div>
       </section>
     </main>
 
+    <!-- RODAPÉ -->
     <footer class="footer">
       <div class="footer-content">
-        <a href="#" class="footer-linktree">Linktree</a>
-        <a href="#" class="footer-github">Github</a>
-        <a href="#" class="footer-sponsors">Patrocinadores</a>
+        <a
+          href="https://github.com/GustavoOSants/Rendex"
+          class="footer-github"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://www.serasaexperian.com.br/transforme-se/"
+          class="footer-sponsors"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Patrocinadores
+        </a>
       </div>
 
       <div class="footer-bottom">
         <p>© 2026 Todos os direitos reservados.</p>
       </div>
     </footer>
+
+    <!-- MENU HAMBÚRGUER: ARQUIVO ÚNICO -->
+    <script src="menuhamburg.js"></script>
+
+    <!-- DESTAQUE DA SEÇÃO ATUAL NO MENU -->
+    <script>
+      const secoes = document.querySelectorAll("main section[id]");
+      const linksMenu = document.querySelectorAll(".nav-links a");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              linksMenu.forEach((link) => {
+                link.classList.toggle(
+                  "active",
+                  link.getAttribute("href") === "#" + entry.target.id,
+                );
+              });
+            }
+          });
+        },
+        { rootMargin: "-25% 0px -65% 0px" },
+      );
+
+      secoes.forEach((secao) => observer.observe(secao));
+    </script>
 
     <!-- INTEGRAÇÃO DO RADAR DE NOTÍCIAS -->
     <script>
@@ -461,9 +490,7 @@
         try {
           const response = await fetch(NEWS_API_URL, {
             method: "GET",
-            headers: {
-              Accept: "application/json",
-            },
+            headers: { Accept: "application/json" },
           });
 
           if (!response.ok) {
@@ -492,23 +519,13 @@
 
             if (noticia.image_url && /^https?:\/\//i.test(noticia.image_url)) {
               const imagem = document.createElement("img");
-
               imagem.className = "news-image";
               imagem.src = noticia.image_url;
               imagem.alt = noticia.title
                 ? "Imagem: " + noticia.title
                 : "Imagem da notícia";
-
               imagem.loading = "lazy";
-
-              imagem.style.width = "100%";
-              imagem.style.height = "160px";
-              imagem.style.objectFit = "cover";
-              imagem.style.borderRadius = "10px";
-              imagem.style.marginBottom = "12px";
-
               imagem.onerror = () => imagem.remove();
-
               card.appendChild(imagem);
             }
 
@@ -528,13 +545,14 @@
 
             const link = document.createElement("a");
             link.textContent = "Ler no portal original ↗";
-            link.href = noticia.link || "#";
 
             if (noticia.link && /^https?:\/\//i.test(noticia.link)) {
+              link.href = noticia.link;
               link.target = "_blank";
               link.rel = "noopener noreferrer";
             } else {
-              link.removeAttribute("href");
+              link.textContent = "Link da matéria indisponível";
+              link.classList.add("link-disabled");
             }
 
             card.append(tag, titulo, descricao);
